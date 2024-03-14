@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <link rel="stilesheet" href="xxx.css">
+ </head>
+ <body>
+  <p>sadsad<br>asdasd</p>
+   Exibir até o termo: <input id="numero" type="number"> <br />
+   <button onclick="fibonacci()">Exibir</button><br />
+   <div id='resposta'></div>
+ </body>
+</html>
+<p id="sss">
+  <script>
+function fibonacci(){
+  var termo = parseInt(document.getElementById('numero').value);
+  var resposta = document.getElementById('resposta');
+  var penultimo=0, ultimo=1;
+  var numero;
+
+  if(termo<=2)
+   numero = termo-1;
+  else
+   for(var count=3 ; count<=termo ; count++){
+    numero = ultimo + penultimo;
+    penultimo = ultimo;
+    ultimo = numero;
+   }
+
+  resposta.innerHTML=numero;
+}
+</script>
